@@ -20,5 +20,7 @@
 **/
 void catch_unhandle_exception();
 
+void catch_unhandle_exception_with(const char *appname);
+
 
 #endif //__MINI_DUMP_H__
