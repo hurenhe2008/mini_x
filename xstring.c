@@ -46,8 +46,11 @@ void* xmemcpy(void *dst, const void *src, unsigned n)
     const char *s = (const char *)src;
     char *d = (char *)dst;
 
-    if (!d || !s || !n) 
+    if (!d || !s || !n)    
         return nullptr;
+  
+    if (s == d)    //equal
+        return dst;
 
     while (n--) 
         d[n] = s[n];
